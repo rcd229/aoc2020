@@ -93,7 +93,7 @@
     }
 
     &__tile {
-      border-bottom: 1px solid $color--gray-light !important;
+      border-bottom: 1px solid $color--gray-medium !important;
 
       &--now {
         background: $color--gray-light;
@@ -106,11 +106,15 @@
       }
 
       &:disabled {
-        opacity: 0.3;
+        background:  $color--gray-light;
+
+        abbr {
+          opacity: 0.1;
+        }
       }
 
       &:not(:nth-child(7n+7)) {
-        border-right: 1px solid $color--gray-light !important;
+        border-right: 1px solid $color--gray-medium !important;
       }
 
       &--active, &--active:hover:enabled, &--active:focus:enabled {
