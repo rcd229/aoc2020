@@ -1,0 +1,26 @@
+@import "../../../App.scss";
+
+.aoc-day--day-2 {
+  display: flex;
+  flex-direction: row;
+
+  &--password-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  &--password-list {
+    font-size: $font-small;
+    white-space: pre-line;
+
+    div {
+      color: $color--text;
+    }
+
+    span {
+      color: $color--red-light;
+      font-weight: bold;
+    }
+  }
+}

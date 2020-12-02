@@ -1,0 +1,23 @@
+@import "../App.scss";
+
+.aoc {
+  &-header {
+    background: $color--text;
+    color: $color--white;
+    display: flex;
+    height: $header-height !important;
+    justify-content: space-between;
+
+    h1 {
+      font-weight: normal;
+    }
+
+    &--menu-button {
+      color: white;
+    }
+  }
+
+  &-menu {
+    width: 25vw;
+  }
+}

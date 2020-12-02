@@ -1,0 +1,84 @@
+@import "../App.scss";
+
+.aoc-day {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height:  calc(100% - #{$main-padding * 2});
+  margin: $main-padding;
+  max-height:  calc(100% - #{$main-padding * 2});
+  overflow: scroll;
+
+  &--header {
+    position: sticky;
+    top: 0;
+
+    &--top-bar {
+      background: $color--red-dark;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      a {
+        color: $color--white;
+        margin: auto 0 auto $main-padding;
+      }
+
+      button {
+        &:hover {
+          background: $color--red-dark;
+          opacity: 0.6;
+        }
+
+        svg {
+          fill: $color--white;
+        }
+      }
+    }
+  }
+
+  &--tab-container {
+    flex: 1;
+  }
+
+  &--tab-bar {
+    background: $color--gray-light;
+    display: flex;
+    flex-direction: row;
+    height: $header-height;
+
+    button {
+      background: $color--green-light;
+      color: $color--gray-light;
+
+      max-width: initial;
+      width: 50%;
+
+      .Mui-selected {
+        background: $color--green-dark;
+        color: $color--white;
+      }
+    }
+  }
+
+  &--tab {
+    background: $color--white;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    padding: $main-padding;
+
+    &[hidden] {
+      display: none;
+    }
+
+    > div:first-child {
+      width: 100%;
+    }
+  }
+
+  .MuiTabs-indicator {
+    display: none;
+  }
+}

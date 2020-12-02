@@ -1,0 +1,121 @@
+@import "../App.scss";
+
+.aoc-home {
+  .react-calendar {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - #{$header-height});
+    margin: auto;
+    width: 100%;
+
+    &__navigation {
+      background: $color--gray-light;
+      height: initial;
+      margin: 0;
+      padding: $main-padding 0;
+
+      button {
+        pointer-events: none;
+
+        span {
+          font-size: $font-xl;
+        }
+
+        &:not(:nth-child(3)) {
+          display: none;
+        }
+      }
+    }
+
+    &__viewContainer {
+      height: 100%;
+    }
+
+    &__month-view {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      > div:first-child {
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          height: inherit;
+        }
+      }
+
+      &__weekdays {
+        font-weight: 400;
+        height: initial !important;
+
+        &__weekday {
+          color: $color--white;
+          padding: $button-padding 0;
+
+          abbr {
+            text-decoration: none;
+          }
+
+          &:nth-child(4n+1) {
+            background: $color--green-dark;
+          }
+
+          &:nth-child(4n+2) {
+            background: $color--green-light;
+          }
+
+          &:nth-child(4n+3) {
+            background: $color--red-dark;
+          }
+
+          &:nth-child(4n+4) {
+            background: $color--red-light;
+          }
+        }
+      }
+
+      &__days {
+        height: inherit;
+
+        &__day {
+          color: $color--text;
+
+          abbr {
+            font-size: $font-large;
+          }
+        }
+      }
+    }
+
+    &__tile {
+      border-bottom: 1px solid $color--gray-light !important;
+
+      &--now {
+        background: $color--gray-light;
+        box-shadow: $box-shadow;
+        z-index: 1;
+
+        &:hover, &:enabled:hover {
+          background: $color--gray-medium;
+        }
+      }
+
+      &:disabled {
+        opacity: 0.3;
+      }
+
+      &:not(:nth-child(7n+7)) {
+        border-right: 1px solid $color--gray-light !important;
+      }
+
+      &--active, &--active:hover:enabled, &--active:focus:enabled {
+        background: $color--gray-medium;
+      }
+    }
+  }
+}

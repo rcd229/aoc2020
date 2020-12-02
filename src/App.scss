@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
+
+$header-height: 64px;
+$main-padding: 20px;
+$button-padding: 10px;
+
+$font-reg: 20px;
+$font-small: 16px;
+$font-large: 24px;
+$font-xl: 30px;
+
+/*COLOR PALETTE*/
+$color--green-dark: #274332;
+$color--green-light: #6d8868;
+$color--red-light: #ac3e32;
+$color--red-dark: #782926;
+$color--gray-light: #f3f5f6;
+$color--gray-medium: #e6e6e6;
+$color--white: #fff;
+$color--text: #000;
+
+$box-shadow: 2px 2px 4px -2px $color--text;
+
+
+#root {
+  height: 100vh;
+}
+
+body {
+  * {
+    font-family: 'Mountains of Christmas', 'cursive';
+    font-size: $font-reg;
+  }
+
+  h1, h2 {
+    font-size: $font-xl;
+  }
+
+  h1, h2, h3, p {
+    margin: 0;
+  }
+}
+
+button.aoc-button {
+  background: $color--red-dark;
+  border: none;
+  border-radius: 0;
+  box-shadow: $box-shadow;
+  color: $color--white;
+  padding: $button-padding;
+
+  .MuiButton-label {
+    color: $color--white;
+    font-weight: 600;
+    font-size: $font-reg;
+  }
+
+  &:hover {
+    background: $color--red-dark;
+    opacity: 0.5;
+  }
+}
