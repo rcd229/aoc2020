@@ -59,4 +59,13 @@ button.aoc-button {
     background: $color--red-dark;
     opacity: 0.5;
   }
+
+  &.selected {
+    background: $color--white;
+    border: 1px solid $color--gray-medium;
+
+    .MuiButton-label {
+      color: $color--red-dark;
+    }
+  }
 }

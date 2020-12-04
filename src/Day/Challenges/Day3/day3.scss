@@ -1,0 +1,37 @@
+@import "../../../App.scss";
+
+.day3 {
+  &__results {
+    &__table {
+      th, td {
+        width: 50%;
+      }
+
+      .MuiTableCell {
+        &-root {
+          font-family: 'Mountains of Christmas', 'cursive';
+          font-size: $font-reg;
+        }
+
+        &-head {
+          font-size: $font-large;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__product {
+      margin-top: $main-padding;
+
+    h2 {
+        text-align: center;
+      }
+
+      span {
+        color:  $color--red-dark;
+        font-size: $font-xl;
+        font-weight: bold;
+      }
+    }
+  }
+}
