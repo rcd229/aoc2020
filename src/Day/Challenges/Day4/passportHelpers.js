@@ -1125,10 +1125,6 @@ const rules = {
   pid: {
     rule: /^\d{9}$/,
     description: "a nine-digit number, including leading zeroes"
-  },
-  cid: {
-    rule: /^.*$/,
-    description: ''
   }
 };
 
@@ -1143,7 +1139,7 @@ export const processPassports = () => {
 
 export const getFields = passport => {
   let pFields = {};
-  const lines = passport.split(/\n|\s/);
+  const lines = passport.split(/[\n|\s]+/);
 
   lines.forEach(line => {
     const [field, data] = line.split(":");
@@ -1187,34 +1183,23 @@ export const checkValidity = passport => {
   const pFields = Object.keys(passport);
 
   let valid = true;
-  let re, data, ruleMap;
+  let re, data;
 
-  if (pFields.length === reqFields.length || (pFields.length === reqFields.length - 1 && !pFields.includes("cid"))) {
-    ruleMap = pFields.map(key => {
-      re = new RegExp(rules[key].rule);
-      data = passport[key];
+  const ruleMap = Object.keys(rules).map(key => {
+    re = new RegExp(rules[key].rule);
+    data = passport[key];
 
-      const ruleValid = re.test(data);
+    const ruleValid = data ? re.test(data) : false;
 
-      valid = valid && ruleValid;
-      return {
-        key,
-        data,
-        ruleValid,
-        icon: ruleValid ? '✓' : 'x',
-        tooltipContent: rules[key].description,
-      }
-    });
-  } else {
-    valid = false;
-    ruleMap = [{
-      key: 'Length',
-      data: 'Your passport does not have all of the required fields!',
-      ruleValid: false,
-      icon: 'x',
-      tooltipContent: 'Fields: byr, iyr, eyr, hgt, hcl, ecl, pid'
-    }];
-  }
+    valid = valid && ruleValid;
+    return {
+      key,
+      data: data || 'N/A (*required*)',
+      ruleValid,
+      icon: ruleValid ? '✓' : 'x',
+      tooltipContent: rules[key].description,
+    }
+  });
 
   return {
     valid,
