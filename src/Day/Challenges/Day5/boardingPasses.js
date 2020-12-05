@@ -900,7 +900,7 @@ BFBBFBBRRL
 FBBBFFBRRL
 FBBBBFFRLL`;
 
-const getPasses = () => {
+export const getPasses = () => {
   return boardingPasses.split(/[\n|\s]/);
 };
 
