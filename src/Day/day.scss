@@ -1,7 +1,6 @@
 @import "../App.scss";
 
 .aoc-day {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height:  calc(100% - #{$main-padding * 2});
@@ -39,6 +38,7 @@
 
   &--tab-container {
     flex: 1;
+    overflow: scroll;;
   }
 
   &--tab-bar {
@@ -63,11 +63,9 @@
 
   &--tab {
     background: $color--gray-light;
-    box-sizing: border-box;
     display: flex;
     flex: 1;
     height: 100%;
-    padding: $main-padding;
 
     &[hidden] {
       display: none;
@@ -75,6 +73,11 @@
 
     > div:first-child {
       width: 100%;
+    }
+
+    &--section {
+      overflow: scroll;
+      padding: $main-padding;
     }
   }
 

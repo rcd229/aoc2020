@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Button from "../../../Components/Button";
 import { expenseReport } from "./expenseReport";
 
 import "./day1.scss";
 
 const Day1 = ({ challengeNumber }) => {
   const [numbers, setNumbers] = useState(null);
-  const [triple, setTriple] = useState(null);
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
@@ -23,7 +21,7 @@ const Day1 = ({ challengeNumber }) => {
 
     while (!pair && ind < expenseReport.length) {
       const firstNum = expenseReport[ind];
-      const secondNum = expenseReport.filter(x => x != firstNum).find(y => firstNum + y === 2020);
+      const secondNum = expenseReport.filter(x => x !== firstNum).find(y => firstNum + y === 2020);
       if (secondNum) {
         pair = [firstNum, secondNum];
       } else {
@@ -70,11 +68,11 @@ const Day1 = ({ challengeNumber }) => {
 
   return (
     <div className="aoc-day--day-1">
-      <div className="expense-report">
+      <div className="expense-report aoc-day--tab--section">
         <h2>Expense Report</h2>
         {expenseReport.join(",\n")}
       </div>
-      <div className="results">
+      <div className="results aoc-day--tab--section">
         <div className="pair">
           <h3>
             The {challengeNumber === 1 ? 'two' : 'three'} numbers that add to 2020 are:

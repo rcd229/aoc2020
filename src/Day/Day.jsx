@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Button, IconButton, Tabs, Tab } from "@material-ui/core";
+import React, { useState } from "react";
+import { IconButton, Tabs, Tab } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 
 import { challengeList } from "./Challenges/challengeList";
@@ -20,14 +20,9 @@ const TabPanel = ({ children, activeTab, index }) => {
 
 const Day = ({ date, handleClose }) => {
   const [challenge, setChallenge] = useState(0);
-  const [challengeData, setChallengeData] = useState(null);
 
   const handleChange = (event, newValue) => {
     setChallenge(newValue);
-  };
-
-  const closeModal = () => {
-    handleClose();
   };
 
   return (

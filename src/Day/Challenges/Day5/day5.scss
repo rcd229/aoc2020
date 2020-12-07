@@ -1,5 +1,62 @@
 @import "../../../App.scss";
 
 .day5 {
-  
+  display: flex;
+  flex-direction: row;
+
+  &__seats {
+    max-height: 100%;
+    padding: $main-padding;
+    width: 50%;
+
+    &__header {
+      margin-bottom: $button-padding;
+    }
+
+    &__seat {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      svg {
+        margin: auto;
+      }
+
+      &-empty {
+        fill: $color--green-light !important;
+        opacity: 0.4;
+      }
+
+      &-you {
+        fill: $color--red-light !important;
+        font-size: $font-xl !important;
+        margin-right: -6px;
+      }
+    }
+  }
+
+  &__results {
+    padding-left: $main-padding;
+    width: 50%;
+  }
+
+  &__legend {
+    margin-bottom: $main-padding * 2;
+
+    h2 {
+      margin-bottom: $button-padding;
+    }
+
+    &__item  {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: $button-padding;
+
+      svg {
+        font-size: $font-xl !important;
+        margin-right: $button-padding;
+      }
+    }
+  }
 }

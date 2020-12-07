@@ -1180,8 +1180,6 @@ export const checkRules = passports => {
 };
 
 export const checkValidity = passport => {
-  const pFields = Object.keys(passport);
-
   let valid = true;
   let re, data;
 

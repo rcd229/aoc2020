@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
@@ -64,7 +63,7 @@ const Day3 = ({ challengeNum }) => {
 
   return (
     <div className="day3">
-      <div classNam="day3__results">
+      <div className="day3__results aoc-day--tab--section">
         <Table classes={{ 'root' : 'day3__results__table'}}>
           <TableHead>
             <TableRow>

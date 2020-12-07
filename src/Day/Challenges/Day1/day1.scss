@@ -8,7 +8,6 @@
   .expense-report {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
     width: 50%;
 
@@ -20,7 +19,6 @@
   .results {
     display: flex;
     flex-direction: column;
-    padding: (2 * $main-padding) 0 (2 * $main-padding) $main-padding;
     width: 50%;
 
     .pair, .product {

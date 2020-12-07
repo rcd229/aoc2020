@@ -65,7 +65,7 @@ const Day2 = ({ challengeNumber }) => {
 
   return (
     <div className="aoc-day--day-2">
-      <div className="aoc-day--day-2--password-container">
+      <div className="aoc-day--day-2--password-container aoc-day--tab--section">
         <h2>Good Passwords: {goodPws.length}</h2>
         <div className="aoc-day--day-2--password-list">
           {goodPws.map(password => {
@@ -75,7 +75,7 @@ const Day2 = ({ challengeNumber }) => {
           })}
         </div>
       </div>
-      <div className="aoc-day--day-2--password-container">
+      <div className="aoc-day--day-2--password-container aoc-day--tab--section">
         <h2>Bad Passwords: {badPws.length}</h2>
         <div className="aoc-day--day-2--password-list">
           {badPws.map(password => {

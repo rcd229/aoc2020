@@ -43,7 +43,7 @@ const Day4 = () => {
 
   return (
     <div className="day4">
-      <div className="day4__results">
+      <div className="day4__results aoc-day--tab--section">
         <div className="day4__results__container">
           <h2>Questionable Security</h2>
           <h3>Valid Passports: <span className="valid">{valid.length}</span></h3>
@@ -55,7 +55,7 @@ const Day4 = () => {
           <h3>Invalid Passports: <span className="invalid">{ruleInvalid.length}</span></h3>
         </div>
       </div>
-      <div className="day4__checker">
+      <div className="day4__checker aoc-day--tab--section">
         <div className="day4__checker__section">
           <h3>Check your own passport below!</h3>
           <TextareaAutosize
