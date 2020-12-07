@@ -73,7 +73,7 @@ const Day5 = () => {
         </div>
         <div className="day5__legend__item">
           <CheckBoxOutlineBlankIcon classes={{ root: 'day5__seats__seat-empty '}} />
-          <p>Epmty Seat</p>
+          <p>Empty Seat</p>
         </div>
       </div>
     )
@@ -141,8 +141,10 @@ const Day5 = () => {
       </div>
       <div className="day5__results aoc-day--tab--section">
         {getLegend()}
-        <h2>Highest Seat ID: {highestSeatId}</h2>
-        <h2>Your Seat: {Math.floor(yourSeat/8) + 1}{seatLetters[yourSeat % 8]} (ID No. {yourSeat})</h2>
+        <h2>Highest Seat ID: <span>{highestSeatId}</span></h2>
+        <h2>
+          Your Seat: {Math.floor(yourSeat/8) + 1}{seatLetters[yourSeat % 8]} (ID No. <span>{yourSeat}</span>)
+        </h2>
       </div>
     </div>
   );

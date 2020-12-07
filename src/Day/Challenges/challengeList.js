@@ -3,6 +3,7 @@ import Day2 from "./Day2";
 import Day3 from "./Day3";
 import Day4 from "./Day4";
 import Day5 from "./Day5";
+import Day6 from "./Day6";
 
 export const challengeList = {
   1: {
@@ -24,5 +25,9 @@ export const challengeList = {
   5: {
     challenge1: <Day5 challengeNumber={1} />,
     challenge2: <Day5 challengeNumber={2} />
+  },
+  6: {
+    challenge1: <Day6 challengeNumber={1} />,
+    challenge2: <Day6 challengeNumber={2} />
   },
 };

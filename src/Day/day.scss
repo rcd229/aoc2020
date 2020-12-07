@@ -84,4 +84,12 @@
   .MuiTabs-indicator {
     display: none;
   }
+
+  h2 {
+    span {
+      color: $color--red-light;
+      font-size: $font-xl;
+      font-weight: bold;
+    }
+  }
 }

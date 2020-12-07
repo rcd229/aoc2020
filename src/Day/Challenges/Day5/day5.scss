@@ -41,6 +41,12 @@
     width: 50%;
   }
 
+  h2 {
+    + h2 {
+      margin-top: $button-padding;
+    }
+  }
+
   &__legend {
     margin-bottom: $main-padding * 2;
 
