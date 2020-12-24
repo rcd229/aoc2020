@@ -24,12 +24,15 @@ const Day18 = () => {
   const solveInput = advanced => {
     const empty = !input || (input && input.trim() === '');
     const notAnEquation = input.match(/[^\d\s+\*\(\)]/g);
-    const sameNumParens = input.match(/\(/g) === input.match(/\)/g);
+    const innerParens = input.match(/\(/g);
+    const outerParens = input.match(/\)/g);
+    const sameNumParens = innerParens && outerParens ? innerParens.length === outerParens.length : true;
+
     if (!(empty || notAnEquation || !sameNumParens)) {
       setInputSolution(solveEquations(advanced, input.replace(/\s+/g,' ')));
     } else {
-      const errorMessage = empty ? 'Please enter an equation'
-        : notAnEquation ? 'This is not an equation!'
+      const errorMessage = empty ? "Weird, there's no maths..."
+        : notAnEquation ? "This math is so weird, it's not even math..."
         : 'You have mismatched parentheses :('
 
       const error = (

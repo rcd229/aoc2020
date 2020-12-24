@@ -30,9 +30,7 @@ const solve = equation => {
     }
     ind = ind + 2;
   }
-
-  console.log(answer);
-
+  
   return answer;
 };
 
