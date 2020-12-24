@@ -1,0 +1,82 @@
+@import "../../../App.scss";
+
+.day22 {
+  &__war {
+    display: flex;
+    justify-content: space-between;
+    padding: $main-padding;
+
+    &__deck {
+      &:last-child {
+        img {
+          padding: $button-padding;
+        }
+      }
+
+      p {
+        margin: $button-padding 0;
+        text-align: center;
+      }
+    }
+
+    &__table {
+      display: flex;
+      flex-direction: column;
+
+      &__cards {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: $main-padding;
+
+        .card:first-child {
+          margin-right: $main-padding;
+        }
+      }
+
+      p {
+        margin-bottom: $main-padding;
+        text-align: center;
+      }
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      font-size: $font-xl;
+      justify-content: space-between;
+      height: 200px;
+      overflow: hidden;
+      text-align: center;
+      width: 150px;
+
+      img {
+        height: inherit;
+        width: inherit;
+      }
+
+      &-green {
+        border: 1px solid $color--green-light;
+      }
+
+      &-red {
+        border: 1px solid $color--red-light;
+      }
+
+      &-face {
+        padding: $button-padding;
+
+        img {
+          border-radius: $main-padding;
+          height: $main-padding;
+          object-fit: cover;
+          width: $main-padding;
+
+          &:last-of-type {
+            align-self: flex-end;
+          }
+        }
+      }
+    }
+  }
+}

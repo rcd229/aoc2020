@@ -4,6 +4,11 @@ import Day3 from "./Day3";
 import Day4 from "./Day4";
 import Day5 from "./Day5";
 import Day6 from "./Day6";
+import Day7 from "./Day7";
+import Day8 from "./Day8";
+import Day9 from "./Day9";
+import Day18 from "./Day18";
+import Day22 from "./Day22";
 
 export const challengeList = {
   1: {
@@ -29,5 +34,25 @@ export const challengeList = {
   6: {
     challenge1: <Day6 challengeNumber={1} />,
     challenge2: <Day6 challengeNumber={2} />
+  },
+  7: {
+    challenge1: <Day7 challengeNumber={1} />,
+    challenge2: <Day7 challengeNumber={2} />
+  },
+  8: {
+    challenge1: <Day8 challengeNumber={1} />,
+    challenge2: <Day8 challengeNumber={2} />
+  },
+  9: {
+    challenge1: <Day9 challengeNumber={1} />,
+    challenge2: <Day9 challengeNumber={2} />
+  },
+  18: {
+    challenge1: <Day18 challengeNumber={1} />,
+    challenge2: <Day18 challengeNumber={2} />
+  },
+  22: {
+    challenge1: <Day22 challengeNumber={1} />,
+    challenge2: <Day22 challengeNumber={2} />
   },
 };

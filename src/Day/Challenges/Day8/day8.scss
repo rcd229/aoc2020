@@ -1,0 +1,13 @@
+@import "../../../App.scss";
+
+.day8 {
+  display: flex;
+
+  &--results {
+    span.instr {
+      color: $color--text;
+      font-weight: normal;
+      font-size: $font-reg;
+    }
+  }
+}

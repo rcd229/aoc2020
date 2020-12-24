@@ -92,4 +92,9 @@
       font-weight: bold;
     }
   }
+
+  .section {
+    overflow: scroll;
+    padding: $main-padding;
+  }
 }
